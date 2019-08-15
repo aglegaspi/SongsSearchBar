@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qup-vY-fOt">
-                                <rect key="frame" x="0.0" y="88" width="414" height="0.0"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-RI-3N6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SongCell" textLabel="IAr-yv-ADA" detailTextLabel="mdE-Ss-y8m" style="IBUITableViewCellStyleSubtitle" id="lfE-JX-Dju">
@@ -58,15 +58,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IGi-RI-3N6" firstAttribute="top" secondItem="qup-vY-fOt" secondAttribute="bottom" id="4M5-tq-gn1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IGi-RI-3N6" secondAttribute="bottom" id="9iN-6V-fpd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qup-vY-fOt" secondAttribute="bottom" constant="774" id="NdQ-ID-dhE"/>
-                            <constraint firstItem="qup-vY-fOt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Znb-tE-WF1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IGi-RI-3N6" secondAttribute="trailing" id="pXA-sD-JOE"/>
-                            <constraint firstItem="qup-vY-fOt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qP1-Cg-xEX"/>
-                            <constraint firstItem="IGi-RI-3N6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uuT-QA-fHI"/>
-                            <constraint firstItem="IGi-RI-3N6" firstAttribute="width" secondItem="qup-vY-fOt" secondAttribute="width" id="xDQ-YM-Ram"/>
-                            <constraint firstItem="qup-vY-fOt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xXg-Nx-Se7"/>
+                            <constraint firstItem="IGi-RI-3N6" firstAttribute="top" secondItem="qup-vY-fOt" secondAttribute="bottom" id="1K3-VQ-aWh"/>
+                            <constraint firstAttribute="bottom" secondItem="IGi-RI-3N6" secondAttribute="bottom" id="KMi-8p-A5A"/>
+                            <constraint firstItem="IGi-RI-3N6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UVT-Lu-HNw"/>
+                            <constraint firstItem="IGi-RI-3N6" firstAttribute="trailing" secondItem="qup-vY-fOt" secondAttribute="trailing" id="YxW-IT-FEk"/>
+                            <constraint firstItem="qup-vY-fOt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bwZ-Od-5Eg"/>
+                            <constraint firstItem="qup-vY-fOt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="djM-op-Y30"/>
+                            <constraint firstItem="qup-vY-fOt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="owZ-zk-gID"/>
+                            <constraint firstItem="IGi-RI-3N6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qXT-Od-Cmn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
