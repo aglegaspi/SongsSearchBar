@@ -13,6 +13,46 @@ class ViewController: UIViewController {
     let songs = Song.loveSongs
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchBarOutlet: UISearchBar!
+    
+    var searchString: String? = nil {
+        didSet {
+            print(searchString)
+            // / call a function on the tableView to reload it's data
+            self.tableView.reloadData()
+        }
+    }
+    
+    var songSearchResults: [Song] {
+        
+        get {
+            guard let searchString = searchString else {
+                return songs
+            }
+            guard searchString != "" else {
+                return songs
+            }
+            
+            if let scopeTitles = searchBarOutlet.scopeButtonTitles {
+                
+                let currentScopeIndex = searchBarOutlet.selectedScopeButtonIndex
+                
+                switch scopeTitles[currentScopeIndex] {
+                case "Title":
+                    return songs.filter{ $0.name.contains(searchString.lowercased()) }
+                case "Artist":
+                    return songs.filter{ $0.artist.contains(searchString.lowercased()) }
+                default:
+                    return songs
+                }
+            }
+        return songs
+        }
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
