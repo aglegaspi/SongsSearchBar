@@ -49,6 +49,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="goN-fZ-gb9" kind="show" identifier="SongDetail" id="gwe-3Q-yKC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
