@@ -75,7 +75,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if var cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") {
             
             cell.textLabel?.text = songs[indexPath.row].name
             cell.detailTextLabel?.text = songs[indexPath.row].artist
