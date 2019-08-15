@@ -18,7 +18,11 @@ class SongDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        artistName.text = song.artist
+        songTitle.text = song.name
+        songImage.image = UIImage(named: "loveSongs")
+        
     }
 
 }
