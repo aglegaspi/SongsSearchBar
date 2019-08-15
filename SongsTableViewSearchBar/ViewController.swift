@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var searchBarOutlet: UISearchBar!
     
+    @IBOutlet weak var noResults: UILabel!
+    
+    
     var searchString: String? = nil {
         didSet {
             print(searchString)

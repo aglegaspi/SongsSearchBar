@@ -29,6 +29,13 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-RI-3N6">
                                 <rect key="frame" x="0.0" y="188" width="414" height="708"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tog-AB-vcM">
+                                    <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SongCell" textLabel="IAr-yv-ADA" detailTextLabel="mdE-Ss-y8m" style="IBUITableViewCellStyleSubtitle" id="lfE-JX-Dju">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -75,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Sj-1L-5HS"/>
                     <connections>
+                        <outlet property="noResults" destination="tog-AB-vcM" id="gVo-Xk-XY6"/>
                         <outlet property="searchBarOutlet" destination="qup-vY-fOt" id="gtj-0G-2cB"/>
                         <outlet property="tableView" destination="IGi-RI-3N6" id="Wea-l0-G8N"/>
                     </connections>
