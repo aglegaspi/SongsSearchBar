@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     
     let songs = Song.loveSongs
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -22,7 +21,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-
+    
+    
+    
 }
 
 // TABLE VIEW PROTOCOLS
@@ -36,11 +37,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         if var cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") {
             
-        cell.textLabel?.text = songs[indexPath.row].name
-        cell.detailTextLabel?.text = songs[indexPath.row].artist
-        
-        
-        return cell
+            cell.textLabel?.text = songs[indexPath.row].name
+            cell.detailTextLabel?.text = songs[indexPath.row].artist
+            
+            
+            return cell
         } else {
             return UITableViewCell()
         }
@@ -77,6 +78,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 // SEARCH BAR PROTOCOLS
 extension ViewController: UISearchBarDelegate {
+    
+    
     
 }
 
