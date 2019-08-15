@@ -10,6 +10,8 @@ import UIKit
 
 class SongDetailViewController: UIViewController {
 
+    var song: Song!
+
     @IBOutlet weak var artistName: UILabel!
     @IBOutlet weak var songTitle: UILabel!
     @IBOutlet weak var songImage: UIImageView!
