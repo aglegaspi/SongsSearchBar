@@ -71,15 +71,15 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songs.count
+        return songSearchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") {
             
-            cell.textLabel?.text = songs[indexPath.row].name
-            cell.detailTextLabel?.text = songs[indexPath.row].artist
+            cell.textLabel?.text = songSearchResults[indexPath.row].name
+            cell.detailTextLabel?.text = songSearchResults[indexPath.row].artist
             
             
             return cell
