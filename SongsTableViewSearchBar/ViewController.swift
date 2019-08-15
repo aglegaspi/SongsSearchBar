@@ -38,10 +38,10 @@ class ViewController: UIViewController {
                 let currentScopeIndex = searchBarOutlet.selectedScopeButtonIndex
                 
                 switch scopeTitles[currentScopeIndex] {
-                case "Title":
-                    return songs.filter{ $0.name.contains(searchString.lowercased()) }
+                case "Song Title":
+                    return songs.filter{ $0.name.lowercased().contains(searchString.lowercased()) }
                 case "Artist":
-                    return songs.filter{ $0.artist.contains(searchString.lowercased()) }
+                    return songs.filter{ $0.artist.lowercased().contains(searchString.lowercased()) }
                 default:
                     return songs
                 }
