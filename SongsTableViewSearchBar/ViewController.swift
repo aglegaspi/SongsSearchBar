@@ -47,7 +47,33 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let segueIdentifier = segue.identifier else {
+            fatalError("No identifier on segue")
+        }
+        
+        switch segueIdentifier {
+            
+        case "SongDetail":
+            
+            guard let songDetail = segue.destination as? SongDetailViewController else {
+                fatalError("Unexpected segue VC")
+            }
+            guard let selectedIndexPath = tableView.indexPathForSelectedRow else {
+                fatalError("No row was selected")
+            }
+            
+            songDetail.song = songs[selectedIndexPath.row] //[selectedIndexPath.row]
+        // we need the section and the row from the static array of all the filtered animals
+        default:
+            fatalError("Unexpected segue identifier")
+        }
+    }
+    
+    
 }
+
 
 // SEARCH BAR PROTOCOLS
 extension ViewController: UISearchBarDelegate {
