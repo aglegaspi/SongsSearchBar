@@ -120,7 +120,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 // SEARCH BAR PROTOCOLS
 extension ViewController: UISearchBarDelegate {
     
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchString = searchBar.text
+    }
     
 }
 
