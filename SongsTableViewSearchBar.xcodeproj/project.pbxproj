@@ -58,16 +58,24 @@
 		54DF90481FB02DBB00B228CF /* SongsTableViewSearchBar */ = {
 			isa = PBXGroup;
 			children = (
-				54DF90491FB02DBB00B228CF /* AppDelegate.swift */,
+				EC06DBC32306027F00903DDB /* Supporting Files */,
 				54DF904B1FB02DBB00B228CF /* ViewController.swift */,
 				EC06DBC12305F21B00903DDB /* SongDetailViewController.swift */,
 				54DF905B1FB02F3E00B228CF /* Song.swift */,
 				54DF904D1FB02DBB00B228CF /* Main.storyboard */,
 				54DF90501FB02DBB00B228CF /* Assets.xcassets */,
-				54DF90521FB02DBB00B228CF /* LaunchScreen.storyboard */,
 				54DF90551FB02DBB00B228CF /* Info.plist */,
 			);
 			path = SongsTableViewSearchBar;
+			sourceTree = "<group>";
+		};
+		EC06DBC32306027F00903DDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				54DF90491FB02DBB00B228CF /* AppDelegate.swift */,
+				54DF90521FB02DBB00B228CF /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
