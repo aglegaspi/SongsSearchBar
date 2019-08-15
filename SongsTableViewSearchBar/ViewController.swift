@@ -42,9 +42,30 @@ class ViewController: UIViewController {
                 
                 switch scopeTitles[currentScopeIndex] {
                 case "Song Title":
-                    return songs.filter{ $0.name.lowercased().contains(searchString.lowercased()) }
+                    let results = songs.filter{ $0.name.lowercased().contains(searchString.lowercased()) }
+                    
+                    if results.isEmpty {
+                        noResults.isHidden = false
+                        searchBarOutlet.resignFirstResponder()
+                    } else {
+                        noResults.isHidden = true
+                    }
+                    
+                    return results
+                    
+                    
                 case "Artist":
-                    return songs.filter{ $0.artist.lowercased().contains(searchString.lowercased()) }
+                    let results = songs.filter{ $0.artist.lowercased().contains(searchString.lowercased()) }
+                    
+                    if results.isEmpty {
+                        noResults.isHidden = false
+                        searchBarOutlet.resignFirstResponder()
+                    } else {
+                        noResults.isHidden = true
+                    }
+                    
+                    return results
+                    
                 default:
                     return songs
                 }
@@ -58,6 +79,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        noResults.isHidden = true
         
         tableView.delegate = self
         tableView.dataSource = self
