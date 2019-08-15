@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let songs = Song.loveSongs
     
     override func viewDidLoad() {
         super.viewDidLoad()
